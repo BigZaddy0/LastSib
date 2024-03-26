@@ -25,7 +25,7 @@ app.options("*", (req, res) => {
     res.send();
   });
   
-app.use(express.static('build'))
+app.listen(express.static('build'))
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
@@ -55,7 +55,7 @@ const start = async () => {
             useUnifiedTopology: true,
         }).then(() => console.log('Connected'));
 
-        const server = app.listen(port, () => {
+        const server = app(port, () => {
             console.log(`Server is listening on port ${port}`);
         });
         const io = new Server(server, {
