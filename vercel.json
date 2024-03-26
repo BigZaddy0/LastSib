@@ -4,7 +4,7 @@
   "builds": [{ "src": "build", "use": "@vercel/node" }],
   "routes": [{
     "src": "/(.*)", 
-    "dest": "build",
+    "dest": "index.js",
     "methods": ["GET", "POST", "PUT", "PATCH",  "DELETE", "OPTIONS"],
     "headers": {
       "Access-Control-Allow-Origin": "*"
