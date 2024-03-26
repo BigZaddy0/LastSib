@@ -26,7 +26,6 @@ app.options("*", (req, res) => {
   });
   
 app.use(express.static('build'))
-app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
