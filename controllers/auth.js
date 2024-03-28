@@ -91,8 +91,6 @@ export const update = async (req, res) => {
                 _id: newId,
                 userId: value.userId,
                 likes: value.likes,
-                phone: value.phone,
-                bio: value.bio,
                 comments: value.comments,
                 location: value.location,
                 description: value.description,
@@ -127,18 +125,18 @@ export const sendRegistrationMail = async (req, res) => {
             },
             data: {
                 sender: {
-                    name: 'SibCenter',
-                    email: 'esantunechi97@gmail.com'
+                    name: 'SibCentre',
+                    email: 'vsachdeva4859@gmail.com'
                 }, to: [{
                     email: email,
                     name: name
                 }
                 ],
-                subject: 'Registration OTP SibCenter',
-                htmlContent: `<p>Your registration otp for SibCenter is ${otp}</p>`,
+                subject: 'Registration OTP Snap-It',
+                htmlContent: `<p>Your registration otp for SibCentre is ${otp}</p>`,
                 replyTo: {
-                    email: 'esantunechi97@gmail.com',
-                    name: 'Snap-It'
+                    email: 'vsachdeva4859@gmail.com',
+                    name: 'SibCentre'
                 }
             }
         });
@@ -172,18 +170,18 @@ export const sendMail = async (req, res) => {
             },
             data: {
                 sender: {
-                    name: 'SibCenter',
-                    email: 'esantunechi97@gmail.com'
+                    name: 'SibCentre',
+                    email: 'vsachdeva4859@gmail.com'
                 }, to: [{
                     email: email,
                     name: name
                 }
                 ],
-                subject: 'Reset Password OTP SibCenter',
-                htmlContent: `<p>Your reset password otp for SibCenter is ${otp}</p>`,
+                subject: 'Reset Password OTP SibCentre',
+                htmlContent: `<p>Your reset password otp for SibCentre ${otp}</p>`,
                 replyTo: {
-                    email: 'esantunechi97@gmail.com',
-                    name: 'SibCenter'
+                    email: 'vsachdeva4859@gmail.com',
+                    name: 'SibCentre'
                 }
             }
         });
